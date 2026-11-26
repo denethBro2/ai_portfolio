@@ -1,0 +1,947 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Deneth Bro - Digital Marketer, Content Creator and Creative Professional.">
+<title>Deneth Bro | Digital Marketer</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --bg: #0b0d12;
+    --surface: #121620;
+    --surface2: #191f2b;
+    --text: #f2f4f8;
+    --muted: #929baa;
+    --accent: #a5f36b;
+    --border: rgba(255,255,255,.09);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    line-height: 1.7;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.container {
+    width: min(1100px, 90%);
+    margin: auto;
+}
+
+h1, h2, h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    line-height: 1.2;
+}
+
+.accent {
+    color: var(--accent);
+}
+
+/* NAVIGATION */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(11,13,18,.9);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid var(--border);
+}
+
+nav {
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-family: 'Space Grotesk';
+    font-size: 23px;
+    font-weight: 700;
+}
+
+.logo span {
+    color: var(--accent);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.nav-links a {
+    font-size: 13px;
+    color: var(--muted);
+    transition: .3s;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+.menu-btn {
+    display: none;
+    background: none;
+    border: 0;
+    color: white;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+/* BUTTONS */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 20px;
+    border-radius: 7px;
+    font-size: 13px;
+    font-weight: 700;
+    transition: .3s;
+    cursor: pointer;
+    border: 1px solid var(--accent);
+}
+
+.btn-primary {
+    background: var(--accent);
+    color: #10140c;
+}
+
+.btn-outline {
+    color: var(--accent);
+    background: transparent;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    opacity: .85;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 620px;
+    display: flex;
+    align-items: center;
+    padding: 90px 0;
+}
+
+.hero-content {
+    max-width: 780px;
+}
+
+.eyebrow {
+    color: var(--accent);
+    font-size: 13px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: clamp(48px, 8vw, 85px);
+    letter-spacing: -4px;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: var(--accent);
+}
+
+.hero-description {
+    max-width: 600px;
+    font-size: 16px;
+    color: var(--muted);
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 13px;
+    margin-bottom: 35px;
+}
+
+.location {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+/* SECTIONS */
+
+section {
+    padding: 90px 0;
+    border-top: 1px solid var(--border);
+}
+
+.section-label {
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 11px;
+    font-weight: 700;
+    margin-bottom: 13px;
+}
+
+.section-title {
+    font-size: clamp(30px, 5vw, 44px);
+    margin-bottom: 18px;
+    letter-spacing: -1.5px;
+}
+
+.section-description {
+    color: var(--muted);
+    max-width: 620px;
+    margin-bottom: 40px;
+}
+
+/* ABOUT */
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1.3fr .7fr;
+    gap: 55px;
+    align-items: center;
+}
+
+.about-text {
+    color: var(--muted);
+    font-size: 15px;
+}
+
+.about-text p {
+    margin-bottom: 17px;
+}
+
+.about-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.about-card h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 13px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 13px;
+}
+
+.info-item:last-child {
+    border: none;
+}
+
+.info-item span:first-child {
+    color: var(--muted);
+}
+
+.info-item span:last-child {
+    text-align: right;
+}
+
+/* SKILLS */
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.skill {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 22px 15px;
+    border-radius: 9px;
+    transition: .3s;
+}
+
+.skill:hover {
+    border-color: var(--accent);
+    transform: translateY(-5px);
+}
+
+.skill h3 {
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.skill p {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+/* PROJECTS */
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.project-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--accent);
+}
+
+.project-top {
+    height: 150px;
+    background: var(--surface2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 45px;
+}
+
+.project-content {
+    padding: 24px;
+}
+
+.project-content h3 {
+    font-size: 19px;
+    margin-bottom: 12px;
+}
+
+.project-content p {
+    color: var(--muted);
+    font-size: 13px;
+    margin-bottom: 18px;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+}
+
+.tag {
+    color: var(--accent);
+    background: rgba(165,243,107,.09);
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 10px;
+}
+
+/* EXPERIENCE */
+
+.timeline {
+    border-left: 1px solid var(--accent);
+    padding-left: 30px;
+    margin-left: 5px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 35px;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    background: var(--accent);
+    border-radius: 50%;
+    left: -36px;
+    top: 6px;
+}
+
+.timeline-item h3 {
+    font-size: 19px;
+    margin-bottom: 5px;
+}
+
+.timeline-item .date {
+    color: var(--accent);
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.timeline-item p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+/* CONTACT */
+
+.contact-box {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 45px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.contact-box h2 {
+    font-size: clamp(30px, 5vw, 45px);
+    margin-bottom: 15px;
+}
+
+.contact-box p {
+    color: var(--muted);
+    margin-bottom: 25px;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.contact-links a {
+    color: var(--muted);
+    border: 1px solid var(--border);
+    padding: 10px 17px;
+    border-radius: 6px;
+    font-size: 12px;
+    transition: .3s;
+}
+
+.contact-links a:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+}
+
+/* FOOTER */
+
+footer {
+    padding: 25px 0;
+    text-align: center;
+    color: var(--muted);
+    font-size: 12px;
+    border-top: 1px solid var(--border);
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 850px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media(max-width: 600px) {
+    nav {
+        height: 65px;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 65px;
+        left: 0;
+        width: 100%;
+        background: var(--surface);
+        flex-direction: column;
+        padding: 25px;
+        gap: 20px;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hero {
+        min-height: 550px;
+        padding: 65px 0;
+    }
+
+    .hero h1 {
+        letter-spacing: -2px;
+    }
+
+    section {
+        padding: 65px 0;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .skill {
+        padding: 17px 12px;
+    }
+
+    .contact-box {
+        padding: 30px 18px;
+    }
+
+    .info-item {
+        font-size: 12px;
+    }
+}
+
+/* PRINT / CV */
+
+@media print {
+    :root {
+        --bg: #ffffff;
+        --surface: #ffffff;
+        --surface2: #f2f2f2;
+        --text: #111111;
+        --muted: #444444;
+        --accent: #333333;
+        --border: #dddddd;
+    }
+
+    body {
+        background: white;
+        color: black;
+        font-size: 11px;
+    }
+
+    header, .hero-buttons, .contact-links,
+    footer, .menu-btn, .btn, .section-label {
+        display: none !important;
+    }
+
+    section {
+        padding: 20px 0;
+        break-inside: avoid;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 25px 0;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 8px;
+    }
+
+    .project-card, .skill, .about-card, .contact-box {
+        border: 1px solid #ddd;
+        break-inside: avoid;
+    }
+
+    .project-top {
+        height: 55px;
+        font-size: 25px;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    @page {
+        margin: 15mm;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="container">
+        <nav>
+            <a href="#home" class="logo">DENETH<span>.</span></a>
+
+            <button class="menu-btn" id="menuBtn" aria-label="Toggle navigation">☰</button>
+
+            <div class="nav-links" id="navLinks">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#experience">Experience</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+    <div class="container">
+        <div class="hero-content">
+
+            <div class="eyebrow">Hello, Welcome to my portfolio</div>
+
+            <h1>I'm <span>Deneth Bro.</span><br>
+            Digital Marketer.</h1>
+
+            <p class="hero-description">
+                A creative and technology-driven individual passionate about
+                digital marketing, content creation, design and innovative
+                digital solutions. Always learning, creating and exploring
+                new opportunities to grow.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">Explore My Work ↗</a>
+                <button onclick="window.print()" class="btn btn-outline">
+                    Download / Print CV ↓
+                </button>
+            </div>
+
+            <div class="location">📍 Sri Lanka</div>
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+    <div class="container">
+        <div class="section-label">01 / About Me</div>
+        <h2 class="section-title">A little about <span class="accent">me.</span></h2>
+
+        <div class="about-grid">
+            <div class="about-text">
+                <p>
+                    I'm Deneth Bro, a passionate Digital Marketer with an
+                    interest in technology, creativity and digital innovation.
+                    I enjoy combining creative thinking with technology to
+                    build meaningful digital experiences.
+                </p>
+
+                <p>
+                    My interests include digital marketing, social media
+                    content creation, graphic design, video editing and
+                    AI-powered workflows. I'm continuously improving my
+                    skills and looking for opportunities to contribute,
+                    collaborate and grow professionally.
+                </p>
+
+                <p>
+                    I believe in learning by doing, thinking creatively
+                    and turning ideas into reality.
+                </p>
+            </div>
+
+            <div class="about-card">
+                <h3>Personal Details</h3>
+
+                <div class="info-item">
+                    <span>Name</span>
+                    <span>Deneth Bro</span>
+                </div>
+
+                <div class="info-item">
+                    <span>Profession</span>
+                    <span>Digital Marketer</span>
+                </div>
+
+                <div class="info-item">
+                    <span>Location</span>
+                    <span>Sri Lanka</span>
+                </div>
+
+                <div class="info-item">
+                    <span>Interests</span>
+                    <span>Tech & Creativity</span>
+                </div>
+
+                <div class="info-item">
+                    <span>Availability</span>
+                    <span class="accent">Open to Opportunities</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SKILLS -->
+
+<section id="skills">
+    <div class="container">
+        <div class="section-label">02 / My Expertise</div>
+        <h2 class="section-title">Skills & <span class="accent">Tools.</span></h2>
+        <p class="section-description">
+            A combination of technical, creative and professional skills
+            that help me bring ideas to life.
+        </p>
+
+        <div class="skills-grid">
+
+            <div class="skill">
+                <h3>HTML / CSS</h3>
+                <p>Web Development</p>
+            </div>
+
+            <div class="skill">
+                <h3>Video Editing</h3>
+                <p>Video Production</p>
+            </div>
+
+            <div class="skill">
+                <h3>Excel</h3>
+                <p>Data & Productivity</p>
+            </div>
+
+            <div class="skill">
+                <h3>Communication</h3>
+                <p>Professional Skills</p>
+            </div>
+
+            <div class="skill">
+                <h3>AI Workflows</h3>
+                <p>AI & Automation</p>
+            </div>
+
+            <div class="skill">
+                <h3>Graphic Design</h3>
+                <p>Visual Creativity</p>
+            </div>
+
+            <div class="skill">
+                <h3>Java</h3>
+                <p>Programming</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- PROJECTS -->
+
+<section id="projects">
+    <div class="container">
+        <div class="section-label">03 / Selected Work</div>
+        <h2 class="section-title">Featured <span class="accent">Projects.</span></h2>
+
+        <p class="section-description">
+            Some of my creative and technical work.
+        </p>
+
+        <div class="projects-grid">
+
+            <article class="project-card">
+                <div class="project-top">✦</div>
+
+                <div class="project-content">
+                    <h3>Digital Content Creation</h3>
+
+                    <p>
+                        A content creation project focused on producing
+                        educational technology videos and engaging
+                        digital content for online audiences.
+                    </p>
+
+                    <div class="tags">
+                        <span class="tag">YouTube</span>
+                        <span class="tag">AI Tools</span>
+                        <span class="tag">Video Editing</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-top">◈</div>
+
+                <div class="project-content">
+                    <h3>Creative Design Projects</h3>
+
+                    <p>
+                        Designed digital visuals and promotional content
+                        to improve online presentation, communication
+                        and brand identity.
+                    </p>
+
+                    <div class="tags">
+                        <span class="tag">Graphic Design</span>
+                        <span class="tag">Branding</span>
+                        <span class="tag">Creativity</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-top">⌘</div>
+
+                <div class="project-content">
+                    <h3>Villa Management System</h3>
+
+                    <p>
+                        Developed a software solution to organize villa
+                        operations, including customer, room, supplier
+                        and order management.
+                    </p>
+
+                    <div class="tags">
+                        <span class="tag">Java</span>
+                        <span class="tag">JavaFX</span>
+                        <span class="tag">MySQL</span>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<!-- EXPERIENCE AND EDUCATION -->
+
+<section id="experience">
+    <div class="container">
+        <div class="section-label">04 / My Journey</div>
+        <h2 class="section-title">Education & <span class="accent">Experience.</span></h2>
+
+        <div class="timeline">
+
+            <div class="timeline-item">
+                <h3>Client Relationship Officer</h3>
+                <div class="date">Abans Finance PLC | Sri Lanka</div>
+                <p>
+                    Experience in customer relationship management,
+                    customer support, documentation, communication
+                    and financial service operations.
+                </p>
+            </div>
+
+            <div class="timeline-item">
+                <h3>Software Engineering Studies</h3>
+                <div class="date">Institute of Java and Software Engineering (IJSE)</div>
+                <p>
+                    Learning software development, programming concepts,
+                    object-oriented programming and modern technologies.
+                </p>
+            </div>
+
+            <div class="timeline-item">
+                <h3>Self-Learning & Creative Development</h3>
+                <div class="date">Ongoing</div>
+                <p>
+                    Developing knowledge in digital marketing, AI tools,
+                    graphic design, video editing and content creation.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+    <div class="container">
+        <div class="contact-box">
+
+            <div class="section-label">05 / Get In Touch</div>
+
+            <h2>Let's create something <span class="accent">great.</span></h2>
+
+            <p>
+                Have an opportunity, project or creative idea?
+                I'd love to hear from you.
+            </p>
+
+            <a href="mailto:your@email.com" class="btn btn-primary">
+                Send Me an Email ↗
+            </a>
+
+            <div class="contact-links">
+                <a href="https://www.linkedin.com/in/YOUR-USERNAME/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+                <a href="https://github.com/YOUR-USERNAME" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+                <a href="https://wa.me/YOUR-PHONE-NUMBER" target="_blank" rel="noopener noreferrer">WhatsApp ↗</a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <div class="container">
+        © 2026 Deneth Bro. Designed with creativity & passion.
+    </div>
+</footer>
+
+<script>
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
+
+menuBtn.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+});
+
+document.querySelectorAll(".nav-links a").forEach(link => {
+    link.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+    });
+});
+</script>
+
+</body>
+</html>
